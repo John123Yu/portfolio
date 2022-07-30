@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import About from './components/About'
+import Portfolio from './components/Porfolio'
 
 const ABOUT_ME = 'About Me'
 const PORTFOLIO = 'Portfolio'
@@ -27,7 +28,10 @@ function App () {
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
       />
-      <StyledPage>{currentCategory === ABOUT_ME && <About />}</StyledPage>
+      <StyledPage>
+        {currentCategory === ABOUT_ME && <About />}
+        {currentCategory === PORTFOLIO && <Portfolio />}
+        </StyledPage>
       <Footer />
     </div>
   )

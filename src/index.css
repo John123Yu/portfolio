@@ -208,6 +208,7 @@ textarea {
 .my-5 {
   margin-top: var(--spacing-five);
   margin-bottom: var(--spacing-five);
+  margin: 15px;
 }
 
 .px-1 {

@@ -6,6 +6,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import About from './components/About'
 import Portfolio from './components/Porfolio'
+import ContactForm from './components/Contact'
+import Resume from './components/Resume'
 
 const ABOUT_ME = 'About Me'
 const PORTFOLIO = 'Portfolio'
@@ -17,6 +19,7 @@ const StyledPage = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px 50px;
+  height: 400px;
 `
 function App () {
   const [currentCategory, setCurrentCategory] = useState(categories[0])
@@ -31,7 +34,9 @@ function App () {
       <StyledPage>
         {currentCategory === ABOUT_ME && <About />}
         {currentCategory === PORTFOLIO && <Portfolio />}
-        </StyledPage>
+        {currentCategory === CONTACT && <ContactForm />}
+        {currentCategory === RESUME && <Resume />}
+      </StyledPage>
       <Footer />
     </div>
   )
